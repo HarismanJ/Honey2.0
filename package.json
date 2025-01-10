@@ -1,0 +1,22 @@
+{
+  "name": "Honey 2.0",
+  "version": "1.0.0",
+  "main": "webscrape.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "playwright": "^1.49.1",
+    "puppeteer": "^19.11.1"
+  },
+  "type": "module",
+  "description": "",
+  "types": "module"
+}

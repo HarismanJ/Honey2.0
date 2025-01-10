@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Honey 2.0",
+  "version": "1.0",
+
+  "description": "Scrapes Coupons",
+
+  "icons": {
+    "48": "border-48.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*checkout*"],
+      "js": ["borderify.js"]
+    }
+  ], 
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab"
+  
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
