@@ -1,13 +1,24 @@
 let selectedInput = null;  // Store the selected input field
-let coupons = []; 
-// Listen for clicks on the webpage to detect input fields
-document.addEventListener('click', (event) => {
+let coupons = [];
+let counter = 0;
+
+
+document.addEventListener("mousedown", (event) => {
   // Check if the clicked element is an input or textarea field
-  if (event.target && (event.target.tagName.toLowerCase() === 'input' || event.target.tagName.toLowerCase() === 'textarea')) {
-      selectedInput = event.target;  // Store the clicked input field
-      selectedInput.value = coupons[0];
-      console.log("Selected input field:", selectedInput);
+  if (event.target.type==='text' &&  (event.target.tagName.toLowerCase() === 'input' || event.target.tagName.toLowerCase() === 'textarea')) {
+    selectedInput = event.target;  // Store the clicked input field
+    if(coupons.length<=0){
+      selectedInput.setAttribute("value", "Please Wait...");
     }
+    if(counter<coupons.length && coupons.length>0) {
+      selectedInput.setAttribute("value",coupons[counter++]); 
+    }  // Dispatch event to notify change
+    else if(coupons.length>0){
+      selectedInput.setAttribute("value","No more coupons :("); 
+      counter=0;
+    }
+      console.log("Selected input field:", selectedInput);
+  }
 });
 
 // Listen for messages from the popup to insert the coupon
@@ -28,6 +39,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "scrapeCoupons" && request.coupons) {
     coupons = request.coupons;  // Store the coupons received from the background script
     console.log("Coupons received:", coupons);
+    chrome.action.openPopup();
+
   }
 });
 

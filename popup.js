@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
     
-    
     // Request the coupons from the background script when the popup is opened
     chrome.runtime.sendMessage({ action: "getCoupons" }, (response) => {
       if (response && response.coupons) {
@@ -27,29 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("No coupons found.");
       }
     });
-    /*
-
-    const insertCouponButton = document.getElementById("insertCouponButton");
-  insertCouponButton.addEventListener("click", () => {
-    if (coupons.length > 0) {
-      // Send a message to the content script to insert the first coupon into the selected text box
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.tabs.sendMessage(tabs[0].id, {
-          action: "insertCoupon",
-          coupon: coupons[0],
-        }, (response) => {
-          if (response.success) {
-            console.log("Coupon inserted:", coupons[0]);
-          } else {
-            console.log("Error:", response.message);
-          }
-        });
-      });
-    } else {
-      console.log("No coupon available.");
-    }
-  });
-  */
+    
 });
   
   
