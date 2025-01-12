@@ -27,4 +27,27 @@ Couponify is a Chrome extension and backend service that scrapes coupon codes fr
 3. Start the backend server:
 
    node server.js
+
+4. Load the Chrome extension:
+
+   1. Open Chrome and navigate to chrome://extensions/.
+   2. Enable Developer Mode (toggle in the top-right corner).
+   3. Click Load unpacked and select the extension folder.
+
+## Usage
+
+   1. Visit a checkout page (e.g., https://example.com/checkout).
+   2. Click on a text input field on the checkout page to autofill coupon codes.
+
+   Alternatively...
+
+   1. Visit any page
+   2. Click the Couponify browser action icon to open the popup.
+   3. Click Find Coupons to start scraping. Coupons will be displayed in the popup.
+
+## Website
+
+* retailmenot.com is used for scraping the codes
+
+
    
