@@ -18,8 +18,8 @@ Couponify is a Chrome extension and backend service that scrapes coupon codes fr
 ### Steps
 1. Clone this repository:
    
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone repository-url
+   cd repository-folder
 
 2. Install dependencies:
    
