@@ -4,10 +4,10 @@ Couponify is a Chrome extension and backend service that scrapes coupon codes fr
 
 ## Features
 
-* 🏷️ Automatic Coupon Scraping: Fetches coupons for the current domain when visiting checkout pages or when "Find Coupon" button is pressed
-* 🛒 Popup Interface: View scraped coupons directly in the extension popup.
-* ✍️ Input Autofill: Click on a text input field to insert coupons one by one.
-* 🔗 Backend Integration: Uses a Node.js server with Puppeteer for web scraping.
+* Automatic Coupon Scraping: Fetches coupons for the current domain when visiting checkout pages or when "Find Coupon" button is pressed
+* Popup Interface: View scraped coupons directly in the extension popup.
+* Input Autofill: Click on a text input field to insert coupons one by one.
+* Backend Integration: Uses a Node.js server with Puppeteer for web scraping.
 
 ## Installation
 
